@@ -1,9 +1,10 @@
 
 import React, { Component } from 'react';
 import Slider from 'react-slick';
-
+import imgt from '../../../../assets/23.jpg'
+import imgt1 from '../../../../assets/24.jpg'
 class SmallImages extends Component {
-    constructor (props) {
+    constructor(props) {
         super(props);
         this.state = {
             nav2: null
@@ -24,26 +25,22 @@ class SmallImages extends Component {
             <div className="row">
                 <div className="col-12 p-0">
                     <Slider {...productsnav} asNavFor={this.props.navOne} ref={slider => (this.slider2 = slider)} className="slider-nav">
-                        {item.variants?
-                        item.variants.map((vari, index) =>
-                            <div key={index}>
-                                <img src={`${vari.images}`} key={index} alt=""  className="img-fluid" />
+                        {item &&
+                            item.images && item.images.length > 0 &&
+                            item.images.map((vari, index) => (<div key={index}>
+                                <img src={index % 2 ? imgt : imgt1} key={index} alt="" className="img-fluid" />
                             </div>
-                        ):
-                            item.pictures.map((vari, index) =>
-                                <div key={index}>
-                                    <img src={`${vari}`} key={index} alt=""  className="img-fluid" />
-                                </div>
-                            )}
+                            ))}
                     </Slider>
                 </div>
                 <div className="col-12 p-0">
-                <div class="theme-collection center"><div class="image-contain"><div class="set-image">
-                <img src={`${process.env.PUBLIC_URL}/assets/images/logos/17.png`} alt="" id="verified" className="img-fluid" /><img src={`${process.env.PUBLIC_URL}/assets/images/verified.png`} alt="" id="verified" className="img-fluid" /></div></div><h5>Company Name</h5></div>
-                     
-                     
+                    <div class="theme-collection center"><div class="image-contain"><div class="set-image">
+                        <img src={`${process.env.PUBLIC_URL}/assets/images/logos/17.png`} alt="" id="verified" className="img-fluid" />
+                        <img src={`${process.env.PUBLIC_URL}/assets/images/verified.png`} alt="" id="verified" className="img-fluid" /></div></div><h5>Company Name</h5></div>
+
+
                 </div>
-            </div> 
+            </div>
         );
     }
 }

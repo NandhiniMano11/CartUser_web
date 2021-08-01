@@ -37,7 +37,7 @@ const Register = (props) => {
     }
     formInfo.profile.forEach((tag) => data.append('profile', tag));
     try {
-      _buyerRegistration(data, function(error, response) {
+      _buyerRegistration(data, function (error, response) {
         if (response !== null) {
           setregresult({ message: 'Successfully Register !' });
           setTimeout(() => {
@@ -158,7 +158,7 @@ const Register = (props) => {
                       <label htmlFor='country'>Country</label>
                       <div class='product-page-per-view'>
                         <select
-                          onChange={(e) => handleinputchange('country', e)}>
+                          onChange={(e) => handleinputchange('country_id', e)}>
                           <option value='Afganistan'>Select Country</option>
                           <option value='Albania'>Albania</option>
                           <option value='Algeria'>Algeria</option>
