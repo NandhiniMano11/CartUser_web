@@ -1,23 +1,23 @@
 self.__precacheManifest = [
   {
-    "revision": "164d95ecba2deff0ff15",
+    "revision": "52273182b9c3ed5cd761",
     "url": "/CartUser_web/static/css/main.056e6fbb.chunk.css"
   },
   {
-    "revision": "164d95ecba2deff0ff15",
-    "url": "/CartUser_web/static/js/main.164d95ec.chunk.js"
+    "revision": "52273182b9c3ed5cd761",
+    "url": "/CartUser_web/static/js/main.52273182.chunk.js"
   },
   {
     "revision": "5ee1b5421e9aa5e84f50",
     "url": "/CartUser_web/static/js/runtime~main.5ee1b542.js"
   },
   {
-    "revision": "4f94ee1a25c467221d98",
+    "revision": "7370f8483765f30de4c2",
     "url": "/CartUser_web/static/css/2.e9596915.chunk.css"
   },
   {
-    "revision": "4f94ee1a25c467221d98",
-    "url": "/CartUser_web/static/js/2.4f94ee1a.chunk.js"
+    "revision": "7370f8483765f30de4c2",
+    "url": "/CartUser_web/static/js/2.7370f848.chunk.js"
   },
   {
     "revision": "9be7ea02fa3fa41aab068404c70b7f84",
@@ -40,7 +40,7 @@ self.__precacheManifest = [
     "url": "/CartUser_web/static/media/18.4e59f7c5.jpg"
   },
   {
-    "revision": "23277b9ec325e43b6e5a61810ad24fe7",
+    "revision": "ede0362caeb60a717913355e4eaae244",
     "url": "/CartUser_web/index.html"
   }
 ];
