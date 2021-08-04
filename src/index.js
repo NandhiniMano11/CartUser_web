@@ -173,7 +173,7 @@ class Root extends React.Component {
                   {/*Routes For Single Product*/}
                   <Route
                     path={`${process.env.PUBLIC_URL}/left-sidebar/product/:id`}
-                    component={LeftSideBar}
+                    component={RightSideBar}
                   />
                   <Route
                     path={`${process.env.PUBLIC_URL}/right-sidebar/product/:id`}
@@ -318,47 +318,40 @@ class Root extends React.Component {
 
                   {/*Product Elements*/}
                   <Route
-                    path={`${
-                      process.env.PUBLIC_URL
-                    }/features/element-product-box`}
+                    path={`${process.env.PUBLIC_URL
+                      }/features/element-product-box`}
                     component={ElementProductBox}
                   />
                   <Route
-                    path={`${
-                      process.env.PUBLIC_URL
-                    }/features/element-product-slider`}
+                    path={`${process.env.PUBLIC_URL
+                      }/features/element-product-slider`}
                     component={ElementProductSlider}
                   />
                   <Route
-                    path={`${
-                      process.env.PUBLIC_URL
-                    }/features/element-product-no-slider`}
+                    path={`${process.env.PUBLIC_URL
+                      }/features/element-product-no-slider`}
                     component={ElementProductNoSlider}
                   />
                   <Route
-                    path={`${
-                      process.env.PUBLIC_URL
-                    }/features/element-product-multiple-slider`}
+                    path={`${process.env.PUBLIC_URL
+                      }/features/element-product-multiple-slider`}
                     component={ElementMultipleSlider}
                   />
                   <Route
-                    path={`${
-                      process.env.PUBLIC_URL
-                    }/features/element-product-tab`}
+                    path={`${process.env.PUBLIC_URL
+                      }/features/element-product-tab`}
                     component={ElementProductTab}
                   />
 
                   {/*Portfolios*/}
                   <Route
-                    path={`${
-                      process.env.PUBLIC_URL
-                    }/features/portfolio-grid/:columns`}
+                    path={`${process.env.PUBLIC_URL
+                      }/features/portfolio-grid/:columns`}
                     component={GridCols}
                   />
                   <Route
-                    path={`${
-                      process.env.PUBLIC_URL
-                    }/features/portfolio-masonary/:columns`}
+                    path={`${process.env.PUBLIC_URL
+                      }/features/portfolio-masonary/:columns`}
                     component={MasonaryGridCols}
                   />
 
