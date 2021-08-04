@@ -28,7 +28,7 @@ export const _productList = async (payload, callback) => {
       param: {},
       reqdata: payload,
     };
-    common_multipart(request)
+    common(request)
       .then((response) => {
         response.data.statusCode == 200 &&
           callback(null, response.data.responseContents);

@@ -40,7 +40,6 @@ const Register = (props) => {
     );
     formInfo.officePhoto.forEach((tag) => data.append('officePhoto', tag));
     try {
-      console.log(formInfo, data.email)
       _sellerregister(data, function (error, response) {
         if (response !== null) {
           setregresult({ message: 'Successfully Register !' });

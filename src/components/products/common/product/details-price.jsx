@@ -74,7 +74,7 @@ const DetailsWithPrice = (props) => {
           <span className='kk1'>Get latest Price</span>
         </h3>
         <p>{item.delivery_option ? item.delivery_option : ''}</p>
-        <p>SKU 4526627</p>
+        <p>{item.productCode ? item.productCode : ''}</p>
 
         <p>
           Minimum order...
@@ -108,7 +108,7 @@ const DetailsWithPrice = (props) => {
                 <tbody>
                   <tr>
                     <th>Brand :</th>
-                    <td>Flbu-1944403</td>
+                    <td>{item.brand_id && item.brand_id.englishBrands ? item.brand_id.englishBrands : ''}</td>
                   </tr>
                   <tr>
                     <th>Model No :</th>
@@ -169,7 +169,7 @@ const DetailsWithPrice = (props) => {
         </div>
         <div className='product-buttons'>
           <a href='https://www.google.com' target='_blank'>
-            <i className='fa fa-file-pdf-o fa-2x' /> Product Catlog
+            <i className='fa fa-file-pdf-o fa-2x' /> Product Catelog
           </a>
           <p />
           <a

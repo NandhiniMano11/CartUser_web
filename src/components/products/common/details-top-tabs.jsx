@@ -52,7 +52,7 @@ const DetailsTopTabs = (props) => {
                 <tbody>
                   <tr>
                     <th>Brand :</th>
-                    <td>Flbu-1903</td>
+                    <td>{item.brand_id && item.brand_id.englishBrands ? item.brand_id.englishBrands : ''}</td>
                   </tr>
                   <tr>
                     <th>Model No :</th>
