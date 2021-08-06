@@ -56,7 +56,15 @@ const DetailsWithPrice = (props) => {
   };
   const changeQty = (e) => {
     setquantity(parseInt(e.target.value));
-  };
+  }; const variants = [
+    {
+      "color": "gray",
+      "images": "/assets/images/fashion/product/15.jpg"
+    },
+    {
+      "color": "orange",
+      "images": "/assets/images/fashion/product/7.jpg"
+    }]
   console.log(item, 'item');
   return (
     <div className='col-lg-6 rtl-text'>
@@ -87,7 +95,7 @@ const DetailsWithPrice = (props) => {
               asNavFor={props.navOne}
               ref={(slider) => (slider1 = slider)}
               className='color-variant'>
-              {item.variants.map((vari, i) => {
+              {variants.map((vari, i) => {
                 return <li className={vari.color} key={i} title={vari.color} />;
               })}
             </Slider>

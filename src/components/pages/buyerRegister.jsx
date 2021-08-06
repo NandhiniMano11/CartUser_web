@@ -2,6 +2,8 @@ import React, { useState } from 'react';
 import Breadcrumb from '../common/breadcrumb';
 import ImageUploader from 'react-images-upload';
 import { _buyerRegistration } from '../../services/api/register';
+import { ToastContainer, toast } from "react-toastify";
+
 const Register = (props) => {
   const [formInfo, setformInfo] = useState({ profile: [] });
   const [regresult, setregresult] = useState({
@@ -39,27 +41,24 @@ const Register = (props) => {
     try {
       _buyerRegistration(data, function (error, response) {
         if (response !== null) {
-          setregresult({ message: 'Successfully Register !' });
-          setTimeout(() => {
-            setregresult({ error: false, message: '' });
-            props.history.push({
-              pathname: '/pages/login',
-            });
-          }, 2000);
+          toast.success("Successfully Registered !");
+          // setregresult({ message: 'Successfully Register !' });
+          props.history.push({ pathname: '/pages/login' });
         } else {
-          setregresult({ error: true, message: 'Registeration failed !' });
-          setTimeout(() => {
-            setregresult({ error: false, message: '' });
-          }, 10000);
+          toast.error(error);
+
         }
       });
     } catch (err) {
       console.log(err);
+      toast.error(err);
+
     }
   };
   return (
     <div>
       <Breadcrumb title={'create account'} />
+      <ToastContainer />
 
       {/*Regsiter section*/}
       <section className='register-page section-b-space'>

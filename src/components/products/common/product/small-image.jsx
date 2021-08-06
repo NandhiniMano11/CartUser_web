@@ -1,8 +1,8 @@
 
 import React, { Component } from 'react';
 import Slider from 'react-slick';
-import imgt from '../../../../assets/23.jpg'
-import imgt1 from '../../../../assets/24.jpg'
+import imgt from '../../../../assets/23.png'
+import imgt1 from '../../../../assets/23.png'
 class SmallImages extends Component {
     constructor(props) {
         super(props);

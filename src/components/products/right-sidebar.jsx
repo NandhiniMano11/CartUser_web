@@ -15,9 +15,9 @@ import { addToCart, addToCartUnsafe, addToWishlist } from '../../actions';
 import ImageZoom from './common/product/image-zoom';
 import SmallImages from './common/product/small-image';
 import { _productDescription } from '../../services/api/product';
-import imgt from '../../assets/23.jpg'
-import imgt1 from '../../assets/24.jpg'
-const RightSideBar = () => {
+const RightSideBar = ({ match }) => {
+  const id = match.params.id
+  console.log(id, 'OOOOOOOOO')
   var productsnav = {
     slidesToShow: 3,
     swipeToSlide: true,
@@ -38,7 +38,7 @@ const RightSideBar = () => {
     loadList();
   }, []);
   const loadList = async () => {
-    _productDescription({ id: '6105aac059e38265aae00512' }, function (
+    _productDescription({ id: id }, function (
       error,
       response,
     ) {
@@ -105,7 +105,8 @@ const RightSideBar = () => {
                             productdetails.images.map((vari, index) => (
                               <div key={index}>
                                 <ImageZoom
-                                  image={index % 2 ? imgt : imgt1}
+                                  image={'https://toppng.com/uploads/preview/t-shirt-picsart-t-shirt-11563273533yrctixk3vb.png'
+                                  }
                                   className='img-fluid image_zoom_cls-0'
                                 />
                               </div>

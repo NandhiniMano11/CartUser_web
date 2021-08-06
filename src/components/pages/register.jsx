@@ -1,6 +1,6 @@
 import React, { Component, useState } from 'react';
 import { _sellerregister } from '../../services/api/register';
-
+import { ToastContainer, toast } from "react-toastify";
 import Breadcrumb from '../common/breadcrumb';
 
 const Register = (props) => {
@@ -9,7 +9,11 @@ const Register = (props) => {
   const [validation, setvalidation] = useState(false);
 
   const handleinputchange = (key, event) => {
-    if (
+    if (key == 'confirmpassword') {
+      formInfo.password === event.target.value
+        ? setvalidation(false)
+        : setvalidation(true);
+    } else if (
       key === 'logo' ||
       key === 'tradeDocument' ||
       key === 'companyProfile' ||
@@ -33,35 +37,40 @@ const Register = (props) => {
         data.append(key, formInfo[key]);
       }
     }
-    formInfo.logo.forEach((tag) => data.append('logo', tag));
-    formInfo.tradeDocument.forEach((tag) => data.append('tradeDocument', tag));
-    formInfo.companyProfile.forEach((tag) =>
+    formInfo.logo && formInfo.logo.length > 0 && formInfo.logo.forEach((tag) => data.append('logo', tag));
+    formInfo.tradeDocument && formInfo.tradeDocument.length > 0 && formInfo.tradeDocument.forEach((tag) => data.append('tradeDocument', tag));
+    formInfo.companyProfile && formInfo.companyProfile.length > 0 && formInfo.companyProfile.forEach((tag) =>
       data.append('companyProfile', tag),
     );
     formInfo.officePhoto.forEach((tag) => data.append('officePhoto', tag));
     try {
       _sellerregister(data, function (error, response) {
         if (response !== null) {
-          setregresult({ message: 'Successfully Register !' });
+          toast.success("Successfully Registered !");
+          // setregresult({ message: 'Successfully Register !' });
           props.history.push({ pathname: '/pages/login' });
         } else {
-          setregresult({ error: true, message: 'Registeration failed !' });
-          setTimeout(() => {
-            setregresult({ error: false, message: '' });
-          }, 10000);
+          toast.error(error);
+          // setregresult({ error: true, message: 'Registeration failed !' });
+          // setTimeout(() => {
+          //   setregresult({ error: false, message: '' });
+          // }, 10000);
         }
       });
-      setTimeout(() => {
-        setregresult({ error: false, message: '' });
-      }, 1000);
+      // setTimeout(() => {
+      //   setregresult({ error: false, message: '' });
+      // }, 1000);
     } catch (err) {
       console.log(err);
+      toast.error(err);
+
     }
   };
 
   return (
     <div>
       <Breadcrumb title={'create account'} />
+      <ToastContainer />
 
       {/*Regsiter section*/}
       <section className='register-page section-b-space'>

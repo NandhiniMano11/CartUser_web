@@ -14,7 +14,7 @@ export const _buyerRegistration = async (payload, callback) => {
           callback(null, response.data.responseContents);
       })
       .catch((error) => {
-        console.log('error', error);
+        callback(error, null);
       });
   } catch (e) {
     callback(e.response.data, null);
@@ -34,7 +34,7 @@ export const _sellerregister = async (payload, callback) => {
           callback(null, response.data.responseContents);
       })
       .catch((error) => {
-        console.log('error', error);
+        callback(error, null);
       });
   } catch (e) {
     callback(e.response.data, null);
