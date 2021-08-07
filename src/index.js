@@ -90,6 +90,14 @@ import ElementProductTab from './components/features/product/element-product-tab
 import GridCols from './components/features/portfolio/grid-cols';
 import MasonaryGridCols from './components/features/portfolio/masonary-grid-cols';
 
+
+// Dashboard New
+
+import SellerDashboard from './components/pages/sellerDashboard'
+import BuyerDashboard from './components/pages/buyerDasboard'
+
+
+
 class Root extends React.Component {
   render() {
     store.dispatch(getAllProducts());
@@ -370,6 +378,14 @@ class Root extends React.Component {
                   />
 
                   {/* <Route exact path="*" component={PageNotFound} /> */}
+                  <Route
+                    path={`${process.env.PUBLIC_URL}/seller-Dashboard`}
+                    component={SellerDashboard}
+                  />
+                     <Route
+                    path={`${process.env.PUBLIC_URL}/buyer-Dashboard`}
+                    component={BuyerDashboard}
+                  />
                 </Layout>
               </Switch>
             </ScrollContext>
