@@ -103,7 +103,7 @@ class Root extends React.Component {
                 <Route
                   exact
                   path={`${process.env.PUBLIC_URL}/`}
-                  component={Landing}
+                  component={Sanaya}
                 />
                 <Route
                   path={`${process.env.PUBLIC_URL}/vegetables`}

@@ -56,7 +56,8 @@ const DetailsWithPrice = (props) => {
   };
   const changeQty = (e) => {
     setquantity(parseInt(e.target.value));
-  }; const variants = [
+  };
+  const variants = [
     {
       "color": "gray",
       "images": "/assets/images/fashion/product/15.jpg"
@@ -159,7 +160,7 @@ const DetailsWithPrice = (props) => {
                 type='text'
                 name='quantity'
                 value={quantity}
-                onChange={() => changeQty()}
+                onChange={(e) => changeQty(e)}
                 className='form-control input-number'
               />
               <span className='input-group-prepend'>

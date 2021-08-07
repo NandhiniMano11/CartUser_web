@@ -6,7 +6,7 @@ import { getTotal, getCartProducts } from '../../../reducers'
 import { addToCart, addToWishlist, addToCompare } from '../../../actions'
 import { getVisibleproducts } from '../../../services';
 import ProductListItem from "./product-list-item";
-import { _productList } from '../../../services/api/product';
+import { _productListByCategory } from '../../../services/api/product';
 
 class ProductListing extends Component {
 
@@ -26,7 +26,9 @@ class ProductListing extends Component {
         this.loadList();
     }
     loadList = async () => {
-        await _productList({}, async (error, response) => {
+        await _productListByCategory({
+            "category_id": "60f04e1183076b5768e819b5"
+        }, async (error, response) => {
             if (response !== null) {
                 this.setState({
                     productListData: JSON.parse(JSON.stringify(response))
@@ -88,7 +90,7 @@ class ProductListing extends Component {
                             :
                             <div className="row">
                                 <div className="col-sm-12 text-center section-b-space mt-5 no-found" >
-                                    <img src={`${process.env.PUBLIC_URL}/assets/images/empty-search.jpg`} className="img-fluid mb-4" />
+                                    <img alt='' src={`${process.env.PUBLIC_URL}/assets/images/empty-search.jpg`} className="img-fluid mb-4" />
                                     <h3>Sorry! Couldn't find the product you were looking For!!!    </h3>
                                     <p>Please check if you have misspelt something or try searching with other words.</p>
                                     <Link to={`${process.env.PUBLIC_URL}/`} className="btn btn-solid">continue shopping</Link>
