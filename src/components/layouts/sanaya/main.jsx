@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 import { Helmet } from 'react-helmet'
 import '../../common/index.scss';
 import Slider from 'react-slick';
+import { Link } from 'react-router-dom';
 
 // Import custom components
 import Collection from "./collection"
@@ -125,18 +126,20 @@ const Sanaya = () => {
                     </div>
                     <div className="row key-feature">
                         {categoryListData.map((item) => (
-                            <div className="col-xl-2 col-md-3 col-6">
-                                <div className="theme-collection">
-                                    <div>
-                                        <div className="image-contain">
-                                            <div className="set-image">
-                                                <img src={`${process.env.PUBLIC_URL}/assets/images/landing-page/icon/3.png`} alt="fetures" onClick={() => handleCategory(item._id)} />
+                            <Link to={`${process.env.PUBLIC_URL}right-sidebar/collection/${item._id}`} >
+                                <div className="col-xl-2 col-md-3 col-6">
+                                    <div className="theme-collection">
+                                        <div>
+                                            <div className="image-contain">
+                                                <div className="set-image">
+                                                    <img src={`${process.env.PUBLIC_URL}/assets/images/landing-page/icon/3.png`} alt="fetures" onClick={() => handleCategory(item._id)} />
+                                                </div>
                                             </div>
+                                            <h5>{item.name}</h5>
                                         </div>
-                                        <h5>{item.name}</h5>
                                     </div>
                                 </div>
-                            </div>
+                            </Link>
                         ))}
                     </div>
                 </div>
@@ -731,7 +734,7 @@ const Sanaya = () => {
                                     <h3>Why to Choose Sanaya to Buy or Sell Building Materials & Its Dead Stock</h3>
                                     <div className="about-text">
                                         <p>Sed ut perspiciatis unde omnis iste natus error sit voluptatem
-                                            accusantium doloremque laudantium, totam rem aperiam.sit voluptatem
+                                        accusantium doloremque laudantium, totam rem aperiam.sit voluptatem
                                             accusantium doloremque laudantium,totam rem aperiam.</p>
                                         <a href="#" class="btn btn-solid black-btn" tabindex="0">Read More</a>
                                     </div>
@@ -891,5 +894,6 @@ const Sanaya = () => {
 
     );
 }
+
 
 export default Sanaya;

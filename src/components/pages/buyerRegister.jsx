@@ -45,7 +45,7 @@ const Register = (props) => {
           // setregresult({ message: 'Successfully Register !' });
           props.history.push({ pathname: '/pages/login' });
         } else if (error.response.status == 500) {
-          toast.error('same email already exist');
+          toast.error('Email Id already exist');
         } else {
           toast.error(error);
         }
