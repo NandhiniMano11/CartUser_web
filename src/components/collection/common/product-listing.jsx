@@ -7,6 +7,8 @@ import { addToCart, addToWishlist, addToCompare } from '../../../actions'
 import { getVisibleproducts } from '../../../services';
 import ProductListItem from "./product-list-item";
 import { _productListByCategory } from '../../../services/api/product';
+import { useParams } from 'react-router-dom'
+// const { id } = useParams()
 
 class ProductListing extends Component {
 
@@ -17,17 +19,19 @@ class ProductListing extends Component {
             limit: 5,
             hasMoreItems: true,
             productListData: [],
+            id: this.props.id
         };
 
     }
 
     componentDidMount() {
         this.fetchMoreItems();
+        console.log(this.state.id)
         this.loadList();
     }
     loadList = async () => {
         await _productListByCategory({
-            "category_id": "60f04e1183076b5768e819b5"
+            "category_id": this.state.id
         }, async (error, response) => {
             if (response !== null) {
                 this.setState({

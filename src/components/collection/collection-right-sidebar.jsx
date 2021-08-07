@@ -1,4 +1,4 @@
-import React, {Component} from 'react';
+import React, { Component } from 'react';
 import Breadcrumb from "../common/breadcrumb";
 import NewProduct from "../common/new-product";
 import Filter from "./common/filter";
@@ -10,24 +10,26 @@ import StickyBox from "react-sticky-box";
 class CollectionRightSidebar extends Component {
 
     state = {
-        layoutColumns:3
+        layoutColumns: 3
     }
 
     LayoutViewClicked(colums) {
         this.setState({
-            layoutColumns:colums
+            layoutColumns: colums
         })
     }
 
     openFilter = () => {
         document.querySelector(".collection-filter").style = "left: -15px";
     }
-    
-    render (){
+
+    render() {
+        console.log(this.props.match.params.id, ")(876543")
+
         return (
             <div>
 
-                <Breadcrumb title={'Seller'}/>
+                <Breadcrumb title={'Seller'} />
 
                 <section className="section-b-space">
                     <div className="collection-wrapper">
@@ -39,7 +41,7 @@ class CollectionRightSidebar extends Component {
                                             <div className="row">
                                                 <div className="col-sm-12">
                                                     <div className="top-banner-wrapper">
-                                                        <a href="#"><img src={`${process.env.PUBLIC_URL}/assets/images/mega-menu/2.jpg`} className="img-fluid" alt=""/></a>
+                                                        <a href="#"><img src={`${process.env.PUBLIC_URL}/assets/images/mega-menu/2.jpg`} className="img-fluid" alt="" /></a>
                                                         <div className="top-banner-content small-section">
                                                             <h4>Seller</h4>
                                                             <h5>Lorem Ipsum is simply dummy text of the printing and typesetting industry.</h5>
@@ -54,21 +56,21 @@ class CollectionRightSidebar extends Component {
                                                                         <div className="filter-main-btn">
                                                                             <span onClick={this.openFilter}
                                                                                 className="filter-btn btn btn-theme"><i
-                                                                                className="fa fa-filter"
-                                                                                aria-hidden="true"></i> Filter</span>
+                                                                                    className="fa fa-filter"
+                                                                                    aria-hidden="true"></i> Filter</span>
                                                                         </div>
                                                                     </div>
                                                                 </div>
                                                                 <div className="row">
                                                                     <div className="col-12">
-                                                                        <FilterBar onLayoutViewClicked={(colmuns) => this.LayoutViewClicked(colmuns)}/>
+                                                                        <FilterBar onLayoutViewClicked={(colmuns) => this.LayoutViewClicked(colmuns)} />
                                                                     </div>
                                                                 </div>
                                                             </div>
                                                         </div>
 
                                                         {/*Products Listing Component*/}
-                                                        <ProductListing colSize={this.state.layoutColumns}/>
+                                                        <ProductListing colSize={this.state.layoutColumns} id={this.props.match.params.id} />
 
                                                     </div>
                                                 </div>
@@ -80,8 +82,8 @@ class CollectionRightSidebar extends Component {
 
                                     <StickyBox offsetTop={20} offsetBottom={20}>
                                         <div>
-                                            <Filter/>
-                                            <NewProduct/>
+                                            <Filter />
+                                            <NewProduct />
                                             <div className="collection-sidebar-banner">
                                                 <a href="#">
                                                     <img src={`${process.env.PUBLIC_URL}/assets/images/side-banner.png`} className="img-fluid" alt="" />

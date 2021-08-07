@@ -154,7 +154,7 @@ class Root extends React.Component {
                     component={CollectionNoSidebar}
                   />
                   <Route
-                    path={`${process.env.PUBLIC_URL}/right-sidebar/collection`}
+                    path={`${process.env.PUBLIC_URL}/right-sidebar/collection/:id`}
                     component={CollectionRightSidebar}
                   />
                   <Route
