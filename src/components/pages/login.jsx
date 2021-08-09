@@ -12,7 +12,8 @@ const Login = (props) => {
       _login(data, function (error, response) {
         if (response !== null) {
           window.localStorage.setItem("data", JSON.stringify(response));
-          props.history.push({ pathname: '/pages/vegetables' });
+          (response.role.englishname).trim().toLowerCase() == 'seller' && props.history.push({ pathname: '/' });
+          (response.role.englishname).trim().toLowerCase() == 'buyer' && props.history.push({ pathname: '/' });
         } else if (error !== null) {
           toast.error(error.responseContents.message);
         }
