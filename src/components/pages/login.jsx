@@ -12,10 +12,10 @@ const Login = (props) => {
       _login(data, function (error, response) {
         if (response !== null) {
           window.localStorage.setItem("data", JSON.stringify(response));
-          (response.role.englishname).trim().toLowerCase() == 'seller' && props.history.push({ pathname: '/' });
-          (response.role.englishname).trim().toLowerCase() == 'buyer' && props.history.push({ pathname: '/' });
+          (response.role.englishname).trim().toLowerCase() == 'seller' && props.history.push({ pathname: '/seller-Dashboard' });
+          (response.role.englishname).trim().toLowerCase() == 'buyer' && props.history.push({ pathname: '/buyer-Dashboard' });
         } else if (error !== null) {
-          toast.error(error.responseContents.message);
+          toast.error(error);
         }
       });
 
