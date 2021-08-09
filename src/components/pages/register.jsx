@@ -53,7 +53,7 @@ const Register = (props) => {
           toast.error('Email Id already exist');
         } else {
           toast.error(error);
-          // setregresult({ error: true, message: 'Registeration failed !' });
+            // setregresult({ error: true, message: 'Registeration failed !' });
           // setTimeout(() => {
           // setregresult({ error: false, message: '' });
           // }, 10000);

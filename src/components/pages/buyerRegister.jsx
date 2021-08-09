@@ -50,11 +50,9 @@ const Register = (props) => {
           toast.error(error);
         }
       })
-
     } catch (err) {
       console.log(err);
       toast.error(err);
-
     }
   };
   return (
