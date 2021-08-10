@@ -506,16 +506,16 @@ class ThemeSettings extends Component {
                                 </ul>
                             </div>
                             <div className="buy_btn">
-                                <a href="https://themeforest.net/item/multikart-responsive-react-ecommerce-template/23067773?s_rank=1"
+                                <a href="#/23067773?s_rank=1"
                                     target="_blank" className="btn btn-block purchase_btn">
                                     <i className="fa fa-shopping-cart" aria-hidden="true"></i> purchase Sanaya now!</a>
-                                <a href="https://themeforest.net/item/multikart-responsive-angular-ecommerce-template/22905358?s_rank=3"
+                                <a href="#multikart-responsive-angular-ecommerce-template/22905358?s_rank=3"
                                     target="_blank" className="btn btn-block purchase_btn">
                                     <img src={`${process.env.PUBLIC_URL}/assets/images/icon/angular.png`} alt="" className="img-fluid" /> Sanaya Angular</a>
-                                <a href="https://themeforest.net/item/multikart-responsive-ecommerce-html-template/22809967"
+                                <a href="#multikart-responsive-ecommerce-html-template/22809967"
                                     target="_blank" className="btn btn-block purchase_btn">
                                     <img src="" alt="" className="img-fluid" /> Sanaya HTML</a>
-                                <a href="https://themeforest.net/item/multikart-multipurpose-shopify-sections-theme/23093831?s_rank=1"
+                                <a href="#multikart-multipurpose-shopify-sections-theme/23093831?s_rank=1"
                                     target="_blank" className="btn btn-block purchase_btn">
                                     <img src={`${process.env.PUBLIC_URL}/assets/images/icon/shopify.png`} alt="" className="img-fluid" /> Sanaya Shopify</a>
                             </div>
