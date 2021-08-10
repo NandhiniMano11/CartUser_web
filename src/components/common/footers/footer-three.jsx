@@ -1,18 +1,18 @@
-import React, {Component} from 'react';
-import { Link} from 'react-router-dom';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
-import {SlideUpDown} from "../../../services/script"
+import { SlideUpDown } from "../../../services/script"
 import LogoImage from "../headers/common/logo"
 
 class FooterThree extends Component {
 
-    componentDidMount(){
+    componentDidMount() {
         var contentwidth = window.innerWidth;
         if ((contentwidth) < 750) {
             SlideUpDown('footer-title');
         } else {
             var elems = document.querySelectorAll(".footer-title");
-            [].forEach.call(elems, function(elemt) {
+            [].forEach.call(elems, function (elemt) {
                 let el = elemt.nextElementSibling;
                 el.style = "display: block";
             });
@@ -20,7 +20,7 @@ class FooterThree extends Component {
     }
 
 
-    render () {
+    render() {
 
         return <footer className="footer-light">
             <div className="dark-layout">
@@ -36,7 +36,7 @@ class FooterThree extends Component {
                                         <LogoImage logo={this.props.logoName} />
                                     </div>
                                     <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
-                                        tempor incididunt ut labore et.Lorem ipsum dolor sit amet, consectetur
+                                    tempor incididunt ut labore et.Lorem ipsum dolor sit amet, consectetur
                                         adipiscing</p>
                                 </div>
                             </div>
@@ -46,7 +46,7 @@ class FooterThree extends Component {
                                     <form>
                                         <div className="form-group">
                                             <input type="text" className="form-control"
-                                                   id="exampleFormControlInput3" placeholder="Enter your email"/>
+                                                id="exampleFormControlInput3" placeholder="Enter your email" />
                                             <button type="submit" className="btn btn-solid">subscribe</button>
                                         </div>
                                     </form>
@@ -58,7 +58,7 @@ class FooterThree extends Component {
                                 </div>
                                 <div className="footer-contant">
                                     <ul className="contact-details">
-                                        <li>Multikart Demo Store, Demo store India 345-659</li>
+                                        <li>Sanaya Demo Store, Demo store India 345-659</li>
                                         <li>Call Us: 123-456-7898</li>
                                         <li>Email Us: <a href="#">Support@Fiot.com</a></li>
                                         <li>Fax: 123456</li>

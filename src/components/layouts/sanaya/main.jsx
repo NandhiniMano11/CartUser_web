@@ -64,7 +64,7 @@ const Sanaya = () => {
             <Helmet>
                 <title>Sananya</title>
             </Helmet>
-            <HeaderThree logoName={'logo/14.png'} />
+            <HeaderThree logoName={'logo/pic.jpeg'} />
             <section className="p-0 small-slider">
                 <Slider className="slide-1 home-slider">
                     <div>

@@ -1,11 +1,11 @@
-import React, {Component} from 'react';
-import {Link} from 'react-router-dom';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 import { withTranslate } from 'react-redux-multilingual'
 
 class TopBarWhite extends Component {
 
     render() {
-        const {translate} = this.props;
+        const { translate } = this.props;
         return (
             <div>
                 <div className="top-header white-bg border-bottom-grey">
@@ -14,7 +14,7 @@ class TopBarWhite extends Component {
                             <div className="col-lg-6">
                                 <div className="header-contact">
                                     <ul>
-                                        <li>{translate('topbar_title', { theme_name: ' Multikart' })}</li>
+                                        <li>{translate('topbar_title', { theme_name: ' Sanaya' })}</li>
                                         <li><i className="fa fa-phone" aria-hidden="true"></i>{translate('call_us')}:  123 - 456 - 7890</li>
                                     </ul>
                                 </div>

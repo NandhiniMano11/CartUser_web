@@ -1,18 +1,18 @@
-import React, {Component} from 'react';
-import { Link} from 'react-router-dom';
+import React, { Component } from 'react';
+import { Link } from 'react-router-dom';
 
-import {SlideUpDown} from "../../../services/script"
+import { SlideUpDown } from "../../../services/script"
 import LogoImage from "../headers/common/logo"
 
 class FooterOne extends Component {
 
-    componentDidMount(){
+    componentDidMount() {
         var contentwidth = window.innerWidth;
         if ((contentwidth) < 750) {
             SlideUpDown('footer-title');
         } else {
             var elems = document.querySelectorAll(".footer-title");
-            [].forEach.call(elems, function(elemt) {
+            [].forEach.call(elems, function (elemt) {
                 let el = elemt.nextElementSibling;
                 el.style = "display: block";
             });
@@ -20,7 +20,7 @@ class FooterOne extends Component {
     }
 
 
-    render () {
+    render() {
 
         return (
             <footer className="footer-light">
@@ -32,7 +32,7 @@ class FooterOne extends Component {
                                     <div className="subscribe">
                                         <div>
                                             <h4>KNOW IT ALL FIRST!</h4>
-                                            <p>Never Miss Anything From Multikart By Signing Up To Our Newsletter. </p>
+                                            <p>Never Miss Anything From Sanaya By Signing Up To Our Newsletter. </p>
                                         </div>
                                     </div>
                                 </div>
@@ -40,7 +40,7 @@ class FooterOne extends Component {
                                     <form className="form-inline subscribe-form">
                                         <div className="form-group mx-sm-3">
                                             <input type="text" className="form-control" id="exampleFormControlInput1"
-                                                   placeholder="Enter your email"/>
+                                                placeholder="Enter your email" />
                                         </div>
                                         <button type="submit" className="btn btn-solid">subscribe</button>
                                     </form>
@@ -121,7 +121,7 @@ class FooterOne extends Component {
                                     </div>
                                     <div className="footer-contant">
                                         <ul className="contact-list">
-                                            <li><i className="fa fa-map-marker"></i>Multikart Demo Store, Demo store
+                                            <li><i className="fa fa-map-marker"></i>Sanaya Demo Store, Demo store
                                                 India 345-659
                                             </li>
                                             <li><i className="fa fa-phone"></i>Call Us: 123-456-7898</li>

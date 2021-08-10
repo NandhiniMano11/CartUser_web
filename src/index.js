@@ -382,7 +382,7 @@ class Root extends React.Component {
                     path={`${process.env.PUBLIC_URL}/seller-Dashboard`}
                     component={SellerDashboard}
                   />
-                     <Route
+                  <Route
                     path={`${process.env.PUBLIC_URL}/buyer-Dashboard`}
                     component={BuyerDashboard}
                   />
