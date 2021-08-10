@@ -1,5 +1,5 @@
 import Axios from 'axios';
-const BASE_URL = 'http://localhost:4000/api/v1/';
+const BASE_URL = 'http://ec2-52-74-16-82.ap-southeast-1.compute.amazonaws.com:4000/api/v1/';
 
 export const common = async ({ reqmethod, url, param, reqdata }) => {
   return Axios({
